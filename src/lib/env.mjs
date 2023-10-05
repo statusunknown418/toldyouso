@@ -1,5 +1,4 @@
 import { createEnv } from "@t3-oss/env-nextjs";
-import "dotenv/config";
 import { z } from "zod";
 
 export const env = createEnv({
@@ -9,6 +8,7 @@ export const env = createEnv({
       .default("development"),
     DATABASE_URL: z.string().min(1),
     CLERK_SECRET_KEY: z.string().min(1),
+
     RESEND_API_KEY: z.string().min(1),
   },
   client: {
