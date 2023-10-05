@@ -9,7 +9,6 @@ export const env = createEnv({
       .default("development"),
     DATABASE_URL: z.string().min(1),
     CLERK_SECRET_KEY: z.string().min(1),
-    VERCEL_URL: z.string().url().optional(),
     RESEND_API_KEY: z.string().min(1),
   },
   client: {
